@@ -2,379 +2,426 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abir Hasan | GIS Specialist</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Abir Hasan | GIS & Remote Sensing Professional</title>
+    <!-- Google Fonts & simple CSS reset -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
-        
-        :root {
-            --primary: #0ea5e9;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-       
+
         body {
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', sans-serif;
+            background: #f4f7fc;
+            color: #1e2a3e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
         }
-       
-        .heading-font {
-            font-family: 'Space Grotesk', sans-serif;
+
+        /* container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 2rem;
         }
-        .hero-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+
+        /* cards & layout */
+        .card {
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            overflow: hidden;
         }
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+        .card:hover {
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
         }
-       
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+        /* header section */
+        .hero {
+            background: linear-gradient(135deg, #0b2b3b 0%, #1a4a5f 100%);
+            border-radius: 28px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 2rem;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
         }
-        .skill-bar {
-            height: 6px;
-            background: linear-gradient(90deg, #0ea5e9, #22d3ee);
-            border-radius: 9999px;
+
+        .hero-info h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
         }
-        .nav-link {
-            position: relative;
+
+        .hero-info .tagline {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            border-left: 3px solid #6bc2e8;
+            padding-left: 1rem;
         }
-       
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #0ea5e9;
-            transition: width 0.3s ease;
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
         }
-       
-        .nav-link:hover:after {
+
+        .contact-details a, .contact-details span {
+            color: #eaf6ff;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.12);
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            backdrop-filter: blur(2px);
+            transition: 0.2s;
+        }
+
+        .contact-details a:hover {
+            background: rgba(255,255,255,0.25);
+            color: white;
+        }
+
+        /* badges / summary */
+        .summary {
+            background: #eef3fa;
+            border-left: 6px solid #2c7da0;
+            padding: 1.6rem 2rem;
+            border-radius: 24px;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 3px solid #cbdde9;
+            padding-bottom: 0.5rem;
+            color: #0f3b4c;
+        }
+
+        .section-title i {
+            color: #2c7da0;
+            font-size: 1.5rem;
+        }
+
+        .grid-2col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .skill-badge {
+            background: #e2edf2;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #1a5a6e;
+        }
+
+        .job-entry, .research-entry {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e2edf2;
+        }
+
+        .job-entry:last-child, .research-entry:last-child {
+            border-bottom: none;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #134b5e;
+        }
+
+        .company {
+            font-weight: 500;
+            color: #2c7da0;
+            display: inline-block;
+            margin-left: 0.25rem;
+        }
+
+        .date {
+            font-size: 0.75rem;
+            color: #5f7f8c;
+            margin-bottom: 0.5rem;
+            display: block;
+            letter-spacing: 0.3px;
+        }
+
+        .desc-list {
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+            list-style-type: none;
+        }
+
+        .desc-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            gap: 0.6rem;
+            align-items: baseline;
+        }
+
+        .desc-list li i {
+            color: #2c7da0;
+            font-size: 0.75rem;
+            margin-top: 0.2rem;
+            min-width: 16px;
+        }
+
+        .education-item {
+            background: #f9fdfe;
+            padding: 1rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .training-item {
+            background: #f9fdfe;
+            display: inline-block;
             width: 100%;
+            margin-bottom: 0.8rem;
+            padding: 0.7rem 1rem;
+            border-radius: 18px;
+        }
+
+        hr {
+            margin: 1.5rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #cbdde9, transparent);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #5f7f8c;
+            border-top: 1px solid #d4e2ec;
+            padding-top: 1.5rem;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 1.2rem;
+            }
+            .hero {
+                flex-direction: column;
+                align-items: start;
+                gap: 1rem;
+            }
+            .hero-info h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .map-bg-decoration {
+            background: radial-gradient(circle at 10% 20%, rgba(44,125,160,0.03) 0%, rgba(255,255,255,0) 70%);
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
-    <!-- Navbar -->
-    <nav class="bg-white border-b sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-sky-500 rounded-2xl flex items-center justify-center text-white font-bold text-xl">A</div>
-                <span class="text-2xl font-semibold heading-font tracking-tight">Abir Hasan</span>
+<body>
+<div class="container map-bg-decoration">
+    <!-- Header / Hero -->
+    <div class="hero">
+        <div class="hero-info">
+            <h1>Abir Hasan</h1>
+            <div class="tagline">
+                <i class="fas fa-map-marked-alt"></i> GIS & Remote Sensing Specialist | Data-driven spatial analyst
             </div>
-           
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#about" class="nav-link text-slate-600 hover:text-slate-900">About</a>
-                <a href="#experience" class="nav-link text-slate-600 hover:text-slate-900">Experience</a>
-                <a href="#projects" class="nav-link text-slate-600 hover:text-slate-900">Projects</a>
-                <a href="#skills" class="nav-link text-slate-600 hover:text-slate-900">Skills</a>
-                <a href="#education" class="nav-link text-slate-600 hover:text-slate-900">Education</a>
-            </div>
-           
-            <a href="#contact"
-               class="px-5 py-2.5 bg-sky-600 hover:bg-sky-700 text-white rounded-2xl text-sm font-semibold flex items-center gap-2 transition-colors">
-                <i class="fas fa-paper-plane"></i>
-                Contact
-            </a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-bg text-white py-24">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-3xl text-sm mb-6">
-                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-                    Available for Opportunities
-                </div>
-               
-                <h1 class="text-6xl md:text-7xl font-bold heading-font leading-tight mb-4">
-                    Abir Hasan
-                </h1>
-                <p class="text-2xl text-sky-300 mb-6">Assistant GIS Specialist</p>
-               
-                <p class="text-lg text-slate-300 max-w-md mb-8">
-                    Passionate geospatial professional with 3+ years of experience in mapping, spatial analysis, 
-                    data validation, and delivering data-driven insights for development projects.
-                </p>
-               
-                <div class="flex flex-wrap gap-4">
-                    <a href="#contact"
-                       class="px-8 py-4 bg-white text-slate-900 rounded-3xl font-semibold flex items-center gap-3 hover:scale-105 transition-transform">
-                        <i class="fas fa-envelope"></i>
-                        Get in Touch
-                    </a>
-                    <a href="https://github.com" target="_blank"
-                       class="px-8 py-4 border border-white/50 hover:border-white rounded-3xl font-semibold flex items-center gap-3 transition-all">
-                        <i class="fab fa-github"></i>
-                        GitHub
-                    </a>
-                </div>
-            </div>
-           
-            <!-- Profile Photo -->
-            <div class="flex justify-center md:justify-end">
-                <div class="relative">
-                    <div class="w-80 h-80 bg-gradient-to-br from-sky-400 to-indigo-500 rounded-[4rem] p-2 shadow-2xl">
-                        <img src="Images/dp.png" alt="Abir Hasan"
-                             class="w-full h-full object-cover rounded-[3rem] shadow-inner">
-                    </div>
-                    <div class="absolute -top-4 -right-4 bg-white text-slate-900 text-xs font-mono px-4 py-2 rounded-2xl shadow-xl flex items-center gap-2">
-                        <i class="fas fa-map-marked-alt text-amber-500"></i>
-                        GIS Specialist
-                    </div>
-                </div>
+            <div class="contact-details">
+                <span><i class="fas fa-envelope"></i> farshadabir1994@gmail.com</span>
+                <span><i class="fas fa-phone-alt"></i> +8801609652462</span>
+                <span><i class="fas fa-map-pin"></i> Nobody Housing, Block D, Mohammadpur, Dhaka</span>
             </div>
         </div>
-    </section>
+        <div style="font-size: 3rem; opacity: 0.7;">
+            <i class="fas fa-globe-asia"></i> <i class="fas fa-satellite-dish"></i>
+        </div>
+    </div>
 
     <!-- Professional Summary -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="flex items-center gap-3 mb-8">
-                <div class="h-px w-12 bg-sky-500"></div>
-                <span class="uppercase text-sky-600 text-sm font-semibold tracking-widest">Professional Summary</span>
+    <div class="summary">
+        <i class="fas fa-chalkboard-user" style="margin-right: 10px; color:#2c7da0;"></i> <strong style="font-size: 1.1rem;">PROFESSIONAL SUMMARY</strong><br/>
+        Focused GIS and field-survey professional with 3+ years of experience in data collection, mapping, QA/QC, client requirement analysis, and technical reporting. Skilled in preparing accurate layouts and survey documentation. Seeking to contribute by delivering reliable data-driven insights and KPI-based technical support for engineering and industrial projects.
+    </div>
+
+    <!-- Core Competencies + Technical Skills (two columns) -->
+    <div class="grid-2col">
+        <!-- Left: Professional Skills -->
+        <div class="card" style="padding: 1.5rem;">
+            <div class="section-title" style="border-bottom: none; margin-bottom: 0.8rem;">
+                <i class="fas fa-bullseye"></i> Core Competencies
             </div>
-            <p class="text-xl leading-relaxed text-slate-600">
-                Focused GIS and field-survey professional with 3 years of experience in data collection, mapping, 
-                QA/QC, client requirement analysis, and technical reporting. Skilled in preparing accurate layouts 
-                and survey documentation. Seeking to contribute by delivering reliable data-driven insights and 
-                KPI-based technical support for engineering and industrial projects.
-            </p>
-        </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="py-20 bg-slate-100">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold heading-font mb-12 text-center">Professional Experience</h2>
-           
-            <div class="space-y-12">
-                <!-- Sheltech -->
-                <div class="bg-white p-8 rounded-3xl card-hover">
-                    <div class="flex flex-col md:flex-row justify-between mb-6">
-                        <div>
-                            <h3 class="text-2xl font-semibold">Assistant GIS Specialist</h3>
-                            <p class="text-sky-600">Sheltech Consultants (PVT.) LTD.</p>
-                        </div>
-                        <div class="text-slate-500">Jan 2025 – Present | Full-Time</div>
-                    </div>
-                    <ul class="list-disc list-inside space-y-3 text-slate-600">
-                        <li>Performed QA/QC of Geospatial database and visual errors on digitized Mouza Maps for the Land Zoning Project, Ministry of Land</li>
-                        <li>Conducted land-use analysis and digitized sixteen Paurosova maps under the IUGIP</li>
-                        <li>Conducted GIS-based spatial data review and field verification for the UTMIDP transport development project in Nawabganj, Dhaka</li>
-                        <li>Applied TerrSet (Markov and CA-Markov model) and ENVI for land-use change modeling and image classification</li>
-                        <li>Used Google Earth Engine to download satellite imagery and analyze soil salinity, LST, and climatic variables</li>
-                        <li>Prepared GIS layouts and technical maps for project documentation and reporting</li>
-                    </ul>
-                </div>
-
-                <!-- IWM -->
-                <div class="bg-white p-8 rounded-3xl card-hover">
-                    <div class="flex flex-col md:flex-row justify-between mb-6">
-                        <div>
-                            <h3 class="text-2xl font-semibold">GIS Analyst</h3>
-                            <p class="text-sky-600">Institute of Water Modelling (IWM)</p>
-                        </div>
-                        <div class="text-slate-500">Nov 2023 – Dec 2024</div>
-                    </div>
-                    <ul class="list-disc list-inside space-y-3 text-slate-600">
-                        <li>Digitization, Georeferencing, Edgematching and Preparation of Geodatabase of Mouza maps for the Land Zoning Project, Ministry of Land</li>
-                    </ul>
-                </div>
-
-                <!-- CEGIS -->
-                <div class="bg-white p-8 rounded-3xl card-hover">
-                    <div class="flex flex-col md:flex-row justify-between mb-6">
-                        <div>
-                            <h3 class="text-2xl font-semibold">Research Consultant</h3>
-                            <p class="text-sky-600">Center for Environmental and Geographic Information Services (CEGIS)</p>
-                        </div>
-                        <div class="text-slate-500">Oct 2020 – Apr 2021</div>
-                    </div>
-                    <ul class="list-disc list-inside space-y-3 text-slate-600">
-                        <li>On-screen digitization and feature extraction from satellite images for the Population Census Project, BBS</li>
-                        <li>Visual interpretation and analysis of satellite imagery</li>
-                        <li>Field surveys to validate geospatial data</li>
-                    </ul>
-                </div>
+            <div class="skill-list">
+                <span class="skill-badge"><i class="fas fa-tasks"></i> Project Management</span>
+                <span class="skill-badge"><i class="fas fa-users"></i> Public Relations</span>
+                <span class="skill-badge"><i class="fas fa-database"></i> QA/QC Geodatabase</span>
+                <span class="skill-badge"><i class="fas fa-chart-line"></i> Technical Reporting</span>
+                <span class="skill-badge"><i class="fas fa-draw-polygon"></i> Land-use analysis</span>
+                <span class="skill-badge"><i class="fas fa-map"></i> Spatial Data Review</span>
             </div>
         </div>
-    </section>
 
-    <!-- Projects / Research -->
-    <section id="projects" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold heading-font mb-12 text-center">Research &amp; Project Involvement</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-slate-50 p-8 rounded-3xl card-hover">
-                    <h3 class="font-semibold text-xl mb-3">NGOs Education Services along Jamuna Riverside</h3>
-                    <p class="text-slate-500 mb-4">PhD Assistant | 2015–2016</p>
-                    <p class="text-slate-600">Data collection, analysis, and processing using SPSS, ArcMap, and survey tools.</p>
+        <!-- Right: Technical Skills + Languages -->
+        <div class="card" style="padding: 1.5rem;">
+            <div class="section-title" style="border-bottom: none; margin-bottom: 0.8rem;">
+                <i class="fas fa-laptop-code"></i> Technical & Languages
+            </div>
+            <div>
+                <div class="skill-list" style="margin-bottom: 1rem;">
+                    <span class="skill-badge">ArcGIS Pro</span>
+                    <span class="skill-badge">ArcMap</span>
+                    <span class="skill-badge">MS Office</span>
+                    <span class="skill-badge">ArcGIS Online</span>
+                    <span class="skill-badge">KoboToolbox</span>
+                    <span class="skill-badge">TerrSet liberaGIS</span>
+                    <span class="skill-badge">Agisoft Metashape</span>
+                    <span class="skill-badge">Google Earth Engine</span>
+                    <span class="skill-badge">ENVI</span>
+                    <span class="skill-badge">SPSS</span>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-3xl card-hover">
-                    <h3 class="font-semibold text-xl mb-3">River Zoning Project</h3>
-                    <p class="text-slate-500 mb-4">Research Associate – River and Delta Research Center | 2018</p>
-                    <p class="text-slate-600">Contributed to river zoning project for Dhaka North City Corporation (DNCC).</p>
-                </div>
+                <div><i class="fas fa-language"></i> <strong>Languages:</strong> English (Fluent), Bengali (Mother Tongue)</div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Skills -->
-    <section id="skills" class="py-20 bg-slate-100">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold heading-font mb-12 text-center">Core Competencies</h2>
-           
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl card-hover">
-                    <div class="flex items-center gap-3 mb-6">
-                        <i class="fas fa-laptop-code text-3xl text-sky-500"></i>
-                        <h3 class="text-2xl font-semibold">Technical Skills</h3>
-                    </div>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between text-sm mb-2">
-                                <span>ArcGIS Pro / ArcMap</span>
-                                <span class="text-sky-600">Expert</span>
-                            </div>
-                            <div class="bg-slate-200 rounded-full overflow-hidden"><div class="skill-bar w-[95%]"></div></div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-sm mb-2">
-                                <span>Google Earth Engine</span>
-                                <span class="text-sky-600">Advanced</span>
-                            </div>
-                            <div class="bg-slate-200 rounded-full overflow-hidden"><div class="skill-bar w-[85%]"></div></div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-sm mb-2">
-                                <span>TerrSet / ENVI</span>
-                                <span class="text-sky-600">Advanced</span>
-                            </div>
-                            <div class="bg-slate-200 rounded-full overflow-hidden"><div class="skill-bar w-[80%]"></div></div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-sm mb-2">
-                                <span>Python • QGIS • KoboToolbox • Agisoft Metashape</span>
-                                <span class="text-sky-600">Intermediate</span>
-                            </div>
-                            <div class="bg-slate-200 rounded-full overflow-hidden"><div class="skill-bar w-[70%]"></div></div>
-                        </div>
-                    </div>
-                </div>
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <div class="card" style="padding: 1.6rem 1.8rem; margin-bottom: 2rem;">
+        <div class="section-title">
+            <i class="fas fa-briefcase"></i> Professional Experience
+        </div>
 
-                <div class="bg-white p-8 rounded-3xl card-hover">
-                    <div class="flex items-center gap-3 mb-6">
-                        <i class="fas fa-users text-3xl text-emerald-500"></i>
-                        <h3 class="text-2xl font-semibold">Professional Skills</h3>
-                    </div>
-                    <ul class="space-y-4 text-lg">
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i>Project Management &amp; Coordination</li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i>Spatial Data Analysis &amp; Modeling</li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i>Land Use / Land Cover Analysis</li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i>Field Survey &amp; Data Validation</li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i>Technical Reporting &amp; Visualization</li>
-                    </ul>
-                </div>
+        <!-- Sheltech Consultants -->
+        <div class="job-entry">
+            <div class="job-title">Assistant GIS Specialist <span class="company">@ Sheltech Consultants (PVT.) LTD.</span></div>
+            <div class="date"><i class="far fa-calendar-alt"></i> Jan 2025 – Present | Full-Time</div>
+            <ul class="desc-list">
+                <li><i class="fas fa-check-circle"></i> Performed QA/QC of Geospatial database and visual errors on digitized Mouza Maps for the Land Zoning Project, Ministry of Land.</li>
+                <li><i class="fas fa-check-circle"></i> Conducted land-use analysis and digitized sixteen Paurosova maps under the IUGIP.</li>
+                <li><i class="fas fa-check-circle"></i> GIS-based spatial data review and field verification for (UTMIDP) transport development project in Nawabganj, Dhaka.</li>
+                <li><i class="fas fa-check-circle"></i> Applied TerrSet (Markov and CA-Markov model) and ENVI for land-use change modeling and image classification.</li>
+                <li><i class="fas fa-check-circle"></i> Used Google Earth Engine to download satellite imagery and analyze soil salinity, land surface temperature (LST), and climatic variables.</li>
+                <li><i class="fas fa-check-circle"></i> Prepared GIS layouts and technical maps for project documentation and reporting.</li>
+            </ul>
+        </div>
 
-                <div class="bg-white p-8 rounded-3xl card-hover">
-                    <div class="flex items-center gap-3 mb-6">
-                        <i class="fas fa-tools text-3xl text-violet-500"></i>
-                        <h3 class="text-2xl font-semibold">Tools &amp; Platforms</h3>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4 text-center">
-                        <div class="p-4 bg-slate-50 rounded-2xl">ArcGIS Online</div>
-                        <div class="p-4 bg-slate-50 rounded-2xl">Agisoft Metashape</div>
-                        <div class="p-4 bg-slate-50 rounded-2xl">MS Office Suite</div>
-                        <div class="p-4 bg-slate-50 rounded-2xl">Python</div>
-                        <div class="p-4 bg-slate-50 rounded-2xl">ENVI</div>
-                        <div class="p-4 bg-slate-50 rounded-2xl">KoboToolbox</div>
-                    </div>
-                </div>
+        <!-- Institute of Water Modelling (IWM) -->
+        <div class="job-entry">
+            <div class="job-title">GIS Analyst <span class="company">@ Institute of Water Modelling (IWM)</span></div>
+            <div class="date"><i class="far fa-calendar-alt"></i> Nov 2023 – Dec 2024</div>
+            <ul class="desc-list">
+                <li><i class="fas fa-check-circle"></i> Digitization, Georeferencing, Edgematching and Preparation of Geodatabase of Mouza maps for the Land Zoning Project, Ministry of Land.</li>
+            </ul>
+        </div>
+
+        <!-- CEGIS Research Consultant -->
+        <div class="job-entry">
+            <div class="job-title">Research Consultant <span class="company">@ Center for Environmental and Geographic Information Services (CEGIS)</span></div>
+            <div class="date"><i class="far fa-calendar-alt"></i> Oct 2020 – Apr 2021</div>
+            <ul class="desc-list">
+                <li><i class="fas fa-check-circle"></i> On-screen digitization and feature extraction from satellite images for the Population Census Project, BBS.</li>
+                <li><i class="fas fa-check-circle"></i> Visual interpretation and analysis of satellite imagery.</li>
+                <li><i class="fas fa-check-circle"></i> Field surveys to validate geospatial data.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- RESEARCH AND PROJECT INVOLVEMENT section (clean separation) -->
+    <div class="card" style="padding: 1.6rem 1.8rem; margin-bottom: 2rem;">
+        <div class="section-title">
+            <i class="fas fa-flask"></i> Research & Project Involvement
+        </div>
+        <div class="job-entry">
+            <div class="job-title">NGOs education services along Jamuna riverside, Bangladesh <span style="font-weight: normal; font-size:0.9rem;">| PhD Assistant (2015-2016)</span></div>
+            <ul class="desc-list">
+                <li><i class="fas fa-check-circle"></i> Data collection, analysis, and processing using SPSS, ArcMap, and survey tools.</li>
+            </ul>
+        </div>
+        <div class="job-entry">
+            <div class="job-title">Research Associate <span class="company">@ River and Delta Research Center</span> <span style="font-weight: normal;">(3 months, 2018)</span></div>
+            <ul class="desc-list">
+                <li><i class="fas fa-check-circle"></i> Contributed to river zoning project for Dhaka North City Corporation (DNCC).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ACADEMIC BACKGROUND + TRAININGS combined grid maybe -->
+    <div class="grid-2col" style="margin-bottom: 1rem;">
+        <div class="card" style="padding: 1.6rem;">
+            <div class="section-title" style="margin-bottom: 1.2rem;">
+                <i class="fas fa-graduation-cap"></i> Academic Background
+            </div>
+            <div class="education-item">
+                <strong>Master of Science, Geography and Environment</strong><br/>
+                Jahangirnagar University (2018)<br/>
+                <span class="skill-badge" style="background:#e0f0f5;">GPA: 3.27/4.0</span>
+            </div>
+            <div class="education-item">
+                <strong>Bachelor of Science, Geography and Environment</strong><br/>
+                Jahangirnagar University (2014-2017)<br/>
+                <span class="skill-badge" style="background:#e0f0f5;">GPA: 3.38/4.0</span>
             </div>
         </div>
-    </section>
 
-    <!-- Education -->
-    <section id="education" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold heading-font mb-12 text-center">Academic Background</h2>
-            <div class="max-w-3xl mx-auto space-y-8">
-                <div class="bg-slate-50 p-8 rounded-3xl">
-                    <h3 class="text-2xl font-semibold">Master of Science in Geography and Environment</h3>
-                    <p class="text-sky-600">Jahangirnagar University • 2018</p>
-                    <p class="text-slate-500">GPA: 3.27/4.0</p>
-                </div>
-                <div class="bg-slate-50 p-8 rounded-3xl">
-                    <h3 class="text-2xl font-semibold">Bachelor of Science in Geography and Environment</h3>
-                    <p class="text-sky-600">Jahangirnagar University • 2014–2017</p>
-                    <p class="text-slate-500">GPA: 3.38/4.0</p>
-                </div>
+        <div class="card" style="padding: 1.6rem;">
+            <div class="section-title" style="margin-bottom: 1.2rem;">
+                <i class="fas fa-chalkboard"></i> Trainings & Certifications
+            </div>
+            <div class="training-item">
+                <i class="fas fa-certificate" style="color:#2c7da0;"></i> Monitoring, Evaluation, Accountability and Learning (MEAL) – Bangladesh Institute of Management (BIM), Nov 2025
+            </div>
+            <div class="training-item">
+                <i class="fab fa-python"></i> Python for Data Science – Udemy (Online), Oct 2025
+            </div>
+            <div class="training-item">
+                <i class="fas fa-chart-simple"></i> Advanced Excel Learning – Udemy (Online), Oct 2025
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Trainings -->
-    <section class="py-20 bg-slate-100">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold heading-font mb-8 text-center">Trainings &amp; Certifications</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-3xl text-center card-hover">
-                    <p class="font-medium">Monitoring, Evaluation, Accountability and Learning (MEAL)</p>
-                    <p class="text-sm text-slate-500 mt-2">Bangladesh Institute of Management (BIM), Nov 2025</p>
-                </div>
-                <div class="bg-white p-6 rounded-3xl text-center card-hover">
-                    <p class="font-medium">Python for Data Science</p>
-                    <p class="text-sm text-slate-500 mt-2">Udemy, Oct 2025</p>
-                </div>
-                <div class="bg-white p-6 rounded-3xl text-center card-hover">
-                    <p class="font-medium">Advanced Excel</p>
-                    <p class="text-sm text-slate-500 mt-2">Udemy, Oct 2025</p>
-                </div>
-            </div>
+    <!-- Additional GIS flavor: mini technical stack / tools used acknowledgement (optional but adds character, not removing CV info) -->
+    <div class="card" style="background: linear-gradient(105deg, #ffffff 0%, #fafeff 100%); padding: 1.2rem 1.8rem; margin-bottom: 1rem;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.8rem;">
+            <div><i class="fas fa-globe" style="color:#2c7da0;"></i> <strong>WebGIS & Remote Sensing Stack:</strong> ArcGIS Online · Google Earth Engine · TerrSet · ENVI · Agisoft Metashape · KoboToolbox</div>
+            <div><i class="fas fa-draw-polygon"></i> <strong>Spatial databases:</strong> Georeferencing · Digitization · QA/QC · Field verification</div>
         </div>
-    </section>
+    </div>
 
-    <!-- Contact / Footer -->
-    <footer id="contact" class="bg-slate-950 text-white py-16">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <div class="text-4xl heading-font mb-6">Let's Connect</div>
-            <p class="text-slate-400 max-w-md mx-auto mb-8">
-                Open to new opportunities in GIS, Remote Sensing, Spatial Analysis, and Environmental Projects.
-            </p>
-           
-            <div class="flex justify-center gap-8 text-4xl mb-10">
-                <a href="mailto:farshadabir1994@gmail.com" class="hover:text-sky-400 transition-colors"><i class="fas fa-envelope"></i></a>
-                <a href="tel:+8801609652462" class="hover:text-sky-400 transition-colors"><i class="fas fa-phone"></i></a>
-                <a href="#" class="hover:text-sky-400 transition-colors"><i class="fab fa-linkedin"></i></a>
-            </div>
-
-            <div class="text-slate-400 text-sm mb-4">
-                <p><strong>Email:</strong> farshadabir1994@gmail.com</p>
-                <p><strong>Phone:</strong> +880 1609-652462</p>
-                <p>Nobodoy Housing, Block D, Mohammadpur, Dhaka</p>
-            </div>
-           
-            <p class="text-slate-500 text-sm mt-8">
-                © 2026 Abir Hasan • Built with ❤️ for Geospatial Technology
-            </p>
-        </div>
+    <!-- Note: References section removed as requested. all original content kept except references -->
+    <!-- But we keep everything else exactly as per CV summary. Additional check: ensure no reference -->
+    <footer>
+        <i class="fas fa-satellite"></i> <i class="fas fa-map"></i> Dedicated GIS professional — delivering reliable spatial insights for engineering & industrial projects.
+        <br/>© 2025 Abir Hasan — portfolio based on geospatial expertise.
     </footer>
-
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+</div>
 </body>
 </html>
