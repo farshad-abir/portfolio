@@ -12,38 +12,34 @@
         :root {
             --primary: #0ea5e9;
         }
-        
+       
         body {
             font-family: 'Inter', system-ui, sans-serif;
         }
-        
+       
         .heading-font {
             font-family: 'Space Grotesk', sans-serif;
         }
-
         .hero-bg {
             background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
         }
-
         .card-hover {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+       
         .card-hover:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
-
         .skill-bar {
             height: 6px;
             background: linear-gradient(90deg, #0ea5e9, #22d3ee);
             border-radius: 9999px;
         }
-
         .nav-link {
             position: relative;
         }
-        
+       
         .nav-link:after {
             content: '';
             position: absolute;
@@ -54,7 +50,7 @@
             background-color: #0ea5e9;
             transition: width 0.3s ease;
         }
-        
+       
         .nav-link:hover:after {
             width: 100%;
         }
@@ -68,7 +64,7 @@
                 <div class="w-9 h-9 bg-sky-500 rounded-2xl flex items-center justify-center text-white font-bold text-xl">A</div>
                 <span class="text-2xl font-semibold heading-font tracking-tight">Abir Hasan</span>
             </div>
-            
+           
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="#about" class="nav-link text-slate-600 hover:text-slate-900">About</a>
                 <a href="#experience" class="nav-link text-slate-600 hover:text-slate-900">Experience</a>
@@ -76,8 +72,8 @@
                 <a href="#skills" class="nav-link text-slate-600 hover:text-slate-900">Skills</a>
                 <a href="#education" class="nav-link text-slate-600 hover:text-slate-900">Education</a>
             </div>
-            
-            <a href="#contact" 
+           
+            <a href="#contact"
                class="px-5 py-2.5 bg-sky-600 hover:bg-sky-700 text-white rounded-2xl text-sm font-semibold flex items-center gap-2 transition-colors">
                 <i class="fas fa-paper-plane"></i>
                 Contact
@@ -93,36 +89,36 @@
                     <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
                     Available for Opportunities
                 </div>
-                
+               
                 <h1 class="text-6xl md:text-7xl font-bold heading-font leading-tight mb-4">
                     Abir Hasan
                 </h1>
                 <p class="text-2xl text-sky-300 mb-6">Assistant GIS Specialist</p>
-                
+               
                 <p class="text-lg text-slate-300 max-w-md mb-8">
                     Passionate geospatial professional with 3+ years of experience in mapping, spatial analysis, 
-                    and delivering data-driven insights.
+                    data validation, and delivering data-driven insights for development projects.
                 </p>
-                
+               
                 <div class="flex flex-wrap gap-4">
-                    <a href="#contact" 
+                    <a href="#contact"
                        class="px-8 py-4 bg-white text-slate-900 rounded-3xl font-semibold flex items-center gap-3 hover:scale-105 transition-transform">
                         <i class="fas fa-envelope"></i>
                         Get in Touch
                     </a>
-                    <a href="https://github.com" target="_blank" 
+                    <a href="https://github.com" target="_blank"
                        class="px-8 py-4 border border-white/50 hover:border-white rounded-3xl font-semibold flex items-center gap-3 transition-all">
                         <i class="fab fa-github"></i>
                         GitHub
                     </a>
                 </div>
             </div>
-            
+           
             <!-- Profile Photo -->
             <div class="flex justify-center md:justify-end">
                 <div class="relative">
                     <div class="w-80 h-80 bg-gradient-to-br from-sky-400 to-indigo-500 rounded-[4rem] p-2 shadow-2xl">
-                        <img src="Images/dp.png" alt="Abir Hasan" 
+                        <img src="Images/dp.png" alt="Abir Hasan"
                              class="w-full h-full object-cover rounded-[3rem] shadow-inner">
                     </div>
                     <div class="absolute -top-4 -right-4 bg-white text-slate-900 text-xs font-mono px-4 py-2 rounded-2xl shadow-xl flex items-center gap-2">
@@ -134,7 +130,7 @@
         </div>
     </section>
 
-    <!-- Summary -->
+    <!-- Professional Summary -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-6">
             <div class="flex items-center gap-3 mb-8">
@@ -144,8 +140,86 @@
             <p class="text-xl leading-relaxed text-slate-600">
                 Focused GIS and field-survey professional with 3 years of experience in data collection, mapping, 
                 QA/QC, client requirement analysis, and technical reporting. Skilled in preparing accurate layouts 
-                and survey documentation.
+                and survey documentation. Seeking to contribute by delivering reliable data-driven insights and 
+                KPI-based technical support for engineering and industrial projects.
             </p>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-20 bg-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold heading-font mb-12 text-center">Professional Experience</h2>
+           
+            <div class="space-y-12">
+                <!-- Sheltech -->
+                <div class="bg-white p-8 rounded-3xl card-hover">
+                    <div class="flex flex-col md:flex-row justify-between mb-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold">Assistant GIS Specialist</h3>
+                            <p class="text-sky-600">Sheltech Consultants (PVT.) LTD.</p>
+                        </div>
+                        <div class="text-slate-500">Jan 2025 – Present | Full-Time</div>
+                    </div>
+                    <ul class="list-disc list-inside space-y-3 text-slate-600">
+                        <li>Performed QA/QC of Geospatial database and visual errors on digitized Mouza Maps for the Land Zoning Project, Ministry of Land</li>
+                        <li>Conducted land-use analysis and digitized sixteen Paurosova maps under the IUGIP</li>
+                        <li>Conducted GIS-based spatial data review and field verification for the UTMIDP transport development project in Nawabganj, Dhaka</li>
+                        <li>Applied TerrSet (Markov and CA-Markov model) and ENVI for land-use change modeling and image classification</li>
+                        <li>Used Google Earth Engine to download satellite imagery and analyze soil salinity, LST, and climatic variables</li>
+                        <li>Prepared GIS layouts and technical maps for project documentation and reporting</li>
+                    </ul>
+                </div>
+
+                <!-- IWM -->
+                <div class="bg-white p-8 rounded-3xl card-hover">
+                    <div class="flex flex-col md:flex-row justify-between mb-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold">GIS Analyst</h3>
+                            <p class="text-sky-600">Institute of Water Modelling (IWM)</p>
+                        </div>
+                        <div class="text-slate-500">Nov 2023 – Dec 2024</div>
+                    </div>
+                    <ul class="list-disc list-inside space-y-3 text-slate-600">
+                        <li>Digitization, Georeferencing, Edgematching and Preparation of Geodatabase of Mouza maps for the Land Zoning Project, Ministry of Land</li>
+                    </ul>
+                </div>
+
+                <!-- CEGIS -->
+                <div class="bg-white p-8 rounded-3xl card-hover">
+                    <div class="flex flex-col md:flex-row justify-between mb-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold">Research Consultant</h3>
+                            <p class="text-sky-600">Center for Environmental and Geographic Information Services (CEGIS)</p>
+                        </div>
+                        <div class="text-slate-500">Oct 2020 – Apr 2021</div>
+                    </div>
+                    <ul class="list-disc list-inside space-y-3 text-slate-600">
+                        <li>On-screen digitization and feature extraction from satellite images for the Population Census Project, BBS</li>
+                        <li>Visual interpretation and analysis of satellite imagery</li>
+                        <li>Field surveys to validate geospatial data</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects / Research -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold heading-font mb-12 text-center">Research &amp; Project Involvement</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-50 p-8 rounded-3xl card-hover">
+                    <h3 class="font-semibold text-xl mb-3">NGOs Education Services along Jamuna Riverside</h3>
+                    <p class="text-slate-500 mb-4">PhD Assistant | 2015–2016</p>
+                    <p class="text-slate-600">Data collection, analysis, and processing using SPSS, ArcMap, and survey tools.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl card-hover">
+                    <h3 class="font-semibold text-xl mb-3">River Zoning Project</h3>
+                    <p class="text-slate-500 mb-4">Research Associate – River and Delta Research Center | 2018</p>
+                    <p class="text-slate-600">Contributed to river zoning project for Dhaka North City Corporation (DNCC).</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -153,7 +227,7 @@
     <section id="skills" class="py-20 bg-slate-100">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-4xl font-semibold heading-font mb-12 text-center">Core Competencies</h2>
-            
+           
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-3xl card-hover">
                     <div class="flex items-center gap-3 mb-6">
@@ -166,36 +240,28 @@
                                 <span>ArcGIS Pro / ArcMap</span>
                                 <span class="text-sky-600">Expert</span>
                             </div>
-                            <div class="bg-slate-200 rounded-full overflow-hidden">
-                                <div class="skill-bar w-[95%]"></div>
-                            </div>
+                            <div class="bg-slate-200 rounded-full overflow-hidden"><div class="skill-bar w-[95%]"></div></div>
                         </div>
                         <div>
                             <div class="flex justify-between text-sm mb-2">
                                 <span>Google Earth Engine</span>
                                 <span class="text-sky-600">Advanced</span>
                             </div>
-                            <div class="bg-slate-200 rounded-full overflow-hidden">
-                                <div class="skill-bar w-[85%]"></div>
-                            </div>
+                            <div class="bg-slate-200 rounded-full overflow-hidden"><div class="skill-bar w-[85%]"></div></div>
                         </div>
                         <div>
                             <div class="flex justify-between text-sm mb-2">
                                 <span>TerrSet / ENVI</span>
                                 <span class="text-sky-600">Advanced</span>
                             </div>
-                            <div class="bg-slate-200 rounded-full overflow-hidden">
-                                <div class="skill-bar w-[80%]"></div>
-                            </div>
+                            <div class="bg-slate-200 rounded-full overflow-hidden"><div class="skill-bar w-[80%]"></div></div>
                         </div>
                         <div>
                             <div class="flex justify-between text-sm mb-2">
-                                <span>Python • QGIS • KoboToolbox</span>
+                                <span>Python • QGIS • KoboToolbox • Agisoft Metashape</span>
                                 <span class="text-sky-600">Intermediate</span>
                             </div>
-                            <div class="bg-slate-200 rounded-full overflow-hidden">
-                                <div class="skill-bar w-[70%]"></div>
-                            </div>
+                            <div class="bg-slate-200 rounded-full overflow-hidden"><div class="skill-bar w-[70%]"></div></div>
                         </div>
                     </div>
                 </div>
@@ -206,11 +272,11 @@
                         <h3 class="text-2xl font-semibold">Professional Skills</h3>
                     </div>
                     <ul class="space-y-4 text-lg">
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i><span>Project Management &amp; Coordination</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i><span>Spatial Data Analysis &amp; Modeling</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i><span>Land Use / Land Cover Analysis</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i><span>Field Survey &amp; Data Validation</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i><span>Technical Reporting &amp; Visualization</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i>Project Management &amp; Coordination</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i>Spatial Data Analysis &amp; Modeling</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i>Land Use / Land Cover Analysis</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i>Field Survey &amp; Data Validation</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-500 mt-1"></i>Technical Reporting &amp; Visualization</li>
                     </ul>
                 </div>
 
@@ -232,25 +298,67 @@
         </div>
     </section>
 
-    <!-- Experience, Projects, Education sections remain the same as previous version -->
+    <!-- Education -->
+    <section id="education" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold heading-font mb-12 text-center">Academic Background</h2>
+            <div class="max-w-3xl mx-auto space-y-8">
+                <div class="bg-slate-50 p-8 rounded-3xl">
+                    <h3 class="text-2xl font-semibold">Master of Science in Geography and Environment</h3>
+                    <p class="text-sky-600">Jahangirnagar University • 2018</p>
+                    <p class="text-slate-500">GPA: 3.27/4.0</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl">
+                    <h3 class="text-2xl font-semibold">Bachelor of Science in Geography and Environment</h3>
+                    <p class="text-sky-600">Jahangirnagar University • 2014–2017</p>
+                    <p class="text-slate-500">GPA: 3.38/4.0</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- (I kept the rest of the sections unchanged for brevity. Copy the full code from my previous response and replace only the image line) -->
+    <!-- Trainings -->
+    <section class="py-20 bg-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold heading-font mb-8 text-center">Trainings &amp; Certifications</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-3xl text-center card-hover">
+                    <p class="font-medium">Monitoring, Evaluation, Accountability and Learning (MEAL)</p>
+                    <p class="text-sm text-slate-500 mt-2">Bangladesh Institute of Management (BIM), Nov 2025</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl text-center card-hover">
+                    <p class="font-medium">Python for Data Science</p>
+                    <p class="text-sm text-slate-500 mt-2">Udemy, Oct 2025</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl text-center card-hover">
+                    <p class="font-medium">Advanced Excel</p>
+                    <p class="text-sm text-slate-500 mt-2">Udemy, Oct 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer -->
+    <!-- Contact / Footer -->
     <footer id="contact" class="bg-slate-950 text-white py-16">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <div class="text-4xl heading-font mb-6">Let's Connect</div>
             <p class="text-slate-400 max-w-md mx-auto mb-8">
-                Open to new opportunities in GIS, Remote Sensing, and Spatial Analysis projects.
+                Open to new opportunities in GIS, Remote Sensing, Spatial Analysis, and Environmental Projects.
             </p>
-            
-            <div class="flex justify-center gap-6 text-3xl mb-12">
-                <a href="#" class="hover:text-sky-400 transition-colors"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com" target="_blank" class="hover:text-sky-400 transition-colors"><i class="fab fa-github"></i></a>
+           
+            <div class="flex justify-center gap-8 text-4xl mb-10">
                 <a href="mailto:farshadabir1994@gmail.com" class="hover:text-sky-400 transition-colors"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+8801609652462" class="hover:text-sky-400 transition-colors"><i class="fas fa-phone"></i></a>
+                <a href="#" class="hover:text-sky-400 transition-colors"><i class="fab fa-linkedin"></i></a>
             </div>
-            
-            <p class="text-slate-500 text-sm">
+
+            <div class="text-slate-400 text-sm mb-4">
+                <p><strong>Email:</strong> farshadabir1994@gmail.com</p>
+                <p><strong>Phone:</strong> +880 1609-652462</p>
+                <p>Nobodoy Housing, Block D, Mohammadpur, Dhaka</p>
+            </div>
+           
+            <p class="text-slate-500 text-sm mt-8">
                 © 2026 Abir Hasan • Built with ❤️ for Geospatial Technology
             </p>
         </div>
